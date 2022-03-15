@@ -1,1 +1,11 @@
 name: cmake build and install
+on: [push]
+jobs:
+  Explore-GitHub-Actions:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Check out repository code
+        uses: actions/checkout@v2
+      - name: list files in the repository
+        run: |
+          ls ${{ github.workspace }}
